@@ -11,13 +11,6 @@ import { useState } from "react";
 import { PiCaretDownBold } from "react-icons/pi";
 
 const dropdowns = Object.entries({
-	"API & SDKs": [
-		{
-			label: "API documentation",
-			href: "https://developers.cloudflare.com/api/",
-		},
-		{ label: "SDKs", href: "/fundamentals/api/reference/sdks/" },
-	],
 	Help: [
 		{ label: "Help center", href: "https://support.cloudflare.com/" },
 		{ label: "Cloudflare status", href: "https://www.cloudflarestatus.com/" },
@@ -85,7 +78,19 @@ export default function HeaderDropdownsComponent() {
 				href="/products/"
 				className="flex items-center justify-center rounded p-2 font-medium text-black no-underline hover:bg-cl1-white hover:shadow-md dark:hover:bg-cl1-gray-0"
 			>
-				Docs Directory
+				Products
+			</a>
+			<a
+				href="https://developers.cloudflare.com/api/"
+				className="flex items-center justify-center rounded p-2 font-medium text-black no-underline hover:bg-cl1-white hover:shadow-md dark:hover:bg-cl1-gray-0"
+			>
+				APIs
+			</a>
+			<a
+				href="/fundamentals/api/reference/sdks/"
+				className="flex items-center justify-center rounded p-2 font-medium text-black no-underline hover:bg-cl1-white hover:shadow-md dark:hover:bg-cl1-gray-0"
+			>
+				SDKs
 			</a>
 			{dropdowns.map((dropdown) => (
 				<Dropdown key={dropdown[0]} dropdown={dropdown} />
