@@ -10,14 +10,25 @@ import { Render, Plan } from "~/components";
 
 <Plan type="workers-all" />
 
-|                                         | Workers Free       | Workers Paid       | Enterprise         |
-| :-------------------------------------- | :----------------- | :----------------- | :----------------- |
-| Browser hours included                  | 10 minutes per day | 10 hours per month | 10 hours per month |
-| Concurrent browsers                     | 3                  | 10                 | 10                 |
-| Price per additional browser hour       | N/A                | $0.09 / hour       | $0.09 / hour       |
-| Price per additional concurrent browser | N/A                | $2                 | $2                 |
+## Workers Free
+
+| Feature                                                    | Limit           |
+| ---------------------------------------------------------- | --------------- |
+| Concurrent browsers per account (Workers Binding API only) | 3 per account   |
+| New browser instances per minute                           | 3 per minute    |
+| Browser timeout                                            | 60 seconds [^2] |
+| Total requests per min (REST API only)                     | 6 per minute    |
+
+## Workers Paid
 
 <Render file="limits-increase" product="browser-rendering" />
+
+| Feature                                                    | Limit               |
+| ---------------------------------------------------------- | ------------------- |
+| Concurrent browsers per account (Workers Binding API only) | 10 per account [^1] |
+| New browser instances per minute                           | 10 per minute [^1]  |
+| Browser timeout                                            | 60 seconds [^2][^1] |
+| Total requests per min (REST API only)                     | 60 per minute       |
 
 [^1]: Contact our team to request increases to this limit.
 
