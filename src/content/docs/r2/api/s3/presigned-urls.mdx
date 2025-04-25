@@ -147,8 +147,8 @@ export default {
 
 In some cases, R2 bindings let you implement certain functionality more easily. For example, if you wanted to offer a write-once guarantee so that users can only upload to a path once:
 
-- With R2 binding: You only need to pass the parameter once.
-- With presigned URLs: You need to sign specific headers and require the sender to send the same headers.
+- With R2 binding: You only need to pass the header once.
+- With presigned URLs: You need to first sign specific headers, then request the user to send the same headers.
 
 <Tabs>
 <TabItem label="R2 binding example">
