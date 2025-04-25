@@ -188,9 +188,9 @@ if (existingObject?.etag !== request.headers.get("etag")) {
 }
 ```
 
-Cloudflare Workers currently have some limitations that you may need to consider:
+When using the bindings, you may need to consider the following limitations:
 
-- You cannot upload more than 100 MiB (200 MiB for Business customers) with a Worker.
+- You cannot upload more than 100 MiB (200 MiB for Business customers) when using the bindings.
 - Enterprise customers can upload 500 MiB by default and can ask their account team to raise this limit.
 - Detecting [precondition failures](/r2/api/s3/extensions/#conditional-operations-in-putobject) is currently easier with presigned URLs as compared with R2 bindings.
 
