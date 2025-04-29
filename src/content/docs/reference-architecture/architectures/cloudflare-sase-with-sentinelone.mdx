@@ -62,7 +62,7 @@ The Cloudflare dashboard provides the configuration interface for:
 
 ### Authentication and Authorization Flow
 
-![][image1]
+![Figure 1: SentinelOne is used in Cloudflare policies as part of authorization flow.](~/assets/images/reference-architecture/cloudflare-sase-with-sentinelone/figure1.svg "Figure 1: SentinelOne is used in Cloudflare policies as part of authorization flow.")
 
 When a user attempts to access a protected resource, the following sequence occurs:
 
@@ -100,7 +100,7 @@ SentinelOne provides endpoint detection and response (EDR) signals that help det
 
 ## Core Architecture Components and Flow
 
-![][image2]
+![Figure 2: SentinelOne and Cloudflare Zero Trust technical architecture.](~/assets/images/reference-architecture/cloudflare-sase-with-sentinelone/figure2.svg "Figure 2: SentinelOne and Cloudflare Zero Trust technical architecture.")
 
 The integration architecture begins at the managed endpoint device level, where two critical components coexist. The SentinelOne agent serves as the primary security enforcer, continuously monitoring the device for threats, assessing device health, and providing real-time security status updates. Alongside it, the Cloudflare WARP client establishes secure connectivity and manages the device's interaction with Cloudflare's Zero Trust infrastructure. These components work in tandem to ensure both endpoint security and secure network access.
 
