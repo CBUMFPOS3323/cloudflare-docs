@@ -15,7 +15,7 @@ meta:
 - A PostgreSQL database
 - A [Hyperdrive configuration to your PostgreSQL database](/hyperdrive/get-started/#3-connect-hyperdrive-to-a-database)
 
-## Installation
+## 1. Install Prisma
 
 Install Prisma, its dependencies, node-postgres driver, and generate the client:
 
@@ -28,9 +28,9 @@ Add the required Node.js compatibility flags and Hyperdrive binding to your `wra
 
 <Render file="hyperdrive-node-compatibility-requirement" />
 
-## Configure Prisma
+## 2. Configure Prisma
 
-### Define a schema
+### 2.1 Define a schema
 
 With Prisma, we define the schema using the Prisma Schema Language (PSL). Create a `prisma/schema.prisma` file in your project:
 
@@ -63,7 +63,7 @@ After defining your schema, generate the Prisma Client:
 npx prisma generate
 ```
 
-### Connect Prisma to the database with Hyperdrive
+### 2.2 Connect Prisma to the database with Hyperdrive
 
 Use your Hyperdrive configuration for your database when using Prisma with the node-postgres adapter within your Worker project:
 
@@ -122,23 +122,23 @@ export default {
 } satisfies ExportedHandler<Env>;
 ```
 
-### Prisma Migrations (optional)
+### 2.3 Migrate Prisma (optional)
 
 You can use Prisma Migrate to create and manage your database schema:
 
-1.  Create a `.env` file in your project root with your direct database connection string:
-    `toml
-DATABASE_URL='postgresql://user:password@db-host.cloud/database-name'
-`
+1. Create a `.env` file in your project root with your direct database connection string:
+   ```toml
+   DATABASE_URL='postgresql://user:password@db-host.cloud/database-name'
+   ```
 
-2.  Initialize and generate your first migration (for development only):
-    `sh
-npx prisma migrate dev --name init
-`
+2. Initialize and generate your first migration (for development only):
+   ```sh
+   npx prisma migrate dev --name init
+   ```
 
-            This will create SQL migration files in the `prisma/migrations` directory and apply them to your database.
+   This will create SQL migration files in the `prisma/migrations` directory and apply them to your database.
 
-3.  For production environments, apply migrations without generating new ones:
-    `sh
-npx prisma migrate deploy
-`
+3. For production environments, apply migrations without generating new ones:
+    ```sh
+   npx prisma migrate deploy
+   ```

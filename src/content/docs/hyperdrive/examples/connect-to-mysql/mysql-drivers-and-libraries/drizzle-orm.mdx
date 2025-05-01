@@ -17,7 +17,7 @@ import { Render } from "~/components";
 - A MySQL database
 - A [Hyperdrive configuration to your MySQL database](/hyperdrive/get-started/#3-connect-hyperdrive-to-a-database)
 
-## Installation
+## 1. Install Drizzle
 
 Install the Drizzle ORM and its dependencies such as the [mysql2](https://github.com/sidorares/node-mysql2) driver:
 
@@ -31,11 +31,11 @@ Add the required Node.js compatibility flags and Hyperdrive binding to your `wra
 
 <Render file="hyperdrive-node-compatibility-requirement" />
 
-## Configure Drizzle
+## 2. Configure Drizzle
 
-### Define a schema
+### 2.1 Define a schema
 
-With Drizzle ORM, we define the schema in TypeScript rather than writing raw SQL. Here's how to define a users table:
+With Drizzle ORM, we define the schema in TypeScript rather than writing raw SQL. Here is how to define a `users` table:
 
 ```ts
 // src/schema.ts
@@ -49,10 +49,9 @@ export const users = mysqlTable("users", {
 });
 ```
 
-### Connect Drizzle ORM to the database with Hyperdrive
+### 2.2 Connect Drizzle ORM to the database with Hyperdrive
 
-Use your the credentials of your Hyperdrive configuration for your database when using the
-Drizzle ORM within your Worker project as such:
+Use your the credentials of your Hyperdrive configuration for your database when using the Drizzle ORM within your Worker project as shown:
 
 ```ts
 // src/db/schema.ts
@@ -86,21 +85,18 @@ export default {
 } satisfies ExportedHandler<Env>;
 ```
 
-### Configure Drizzle-Kit for migrations (optional)
+### 2.3 Configure Drizzle-Kit for migrations (optional)
 
-You can generate and run SQL migrations on your database based on your schema
-using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs/get-started/mysql-new) for additional guidance.
+You can generate and run SQL migrations on your database based on your schema using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs/get-started/mysql-new) for additional guidance.
 
-1.  Create a `.env` file and add your database connection string. The Drizzle Kit CLI will use
-    this connection string to create and apply the migrations.
+1. Create a `.env` file and add your database connection string. The Drizzle Kit CLI will use this connection string to create and apply the migrations.
 
     ```toml
     # Replace with your direct database connection string
     	DATABASE_URL='mysql://user:password@db-host.cloud/database-name'
     ```
 
-2.  Create a `drizzle.config.ts` file in the root of your project to configure Drizzle Kit
-    and add the following content:
+2. Create a `drizzle.config.ts` file in the root of your project to configure Drizzle Kit and add the following content:
 
         	```ts
         	import 'dotenv/config';
@@ -115,8 +111,9 @@ using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs
         	});
         	```
 
-3.  Generate the migration file for your database according to your schema files and apply the migrations to your database.
-    `bash
-npx drizzle-kit generate
-npx drizzle-kit migrate
-`
+3. Generate the migration file for your database according to your schema files and apply the migrations to your database.
+
+  ```bash
+  npx drizzle-kit generate
+  npx drizzle-kit migrate
+  ```
