@@ -5,7 +5,7 @@ productLink: "/hyperdrive/"
 productArea: Developer platform
 productAreaLink: /workers/platform/changelog/platform/
 entries:
-  - publish_date: "2025-05-02"
+  - publish_date: "2025-05-05"
     title: Hyperdrive improves regional caching for prepared statements for faster cache hits
     description: |-
       Hyperdrive now better caches prepared statements closer to your Workers. This results in up to 5x faster cache hits by
