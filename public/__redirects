@@ -1709,7 +1709,23 @@
 /hyperdrive/examples/timescale/ /hyperdrive/examples/connect-to-postgres/timescale/ 301
 /hyperdrive/examples/xata/ /hyperdrive/examples/connect-to-postgres/xata/ 301
 /hyperdrive/examples/fly/ /hyperdrive/examples/connect-to-postgres/fly/ 301
-
+/hyperdrive/examples/aws-rds-aurora/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/aws-rds-aurora/ 301
+/hyperdrive/examples/azure/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/azure/ 301
+/hyperdrive/examples/cockroachdb/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/cockroachdb/ 301
+/hyperdrive/examples/digital-ocean/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/digital-ocean/ 301
+/hyperdrive/examples/google-cloud-sql/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/google-cloud-sql/ 301
+/hyperdrive/examples/materialize/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/materialize/ 301
+/hyperdrive/examples/neon/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/neon/ 301
+/hyperdrive/examples/nile/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/nile/ 301
+/hyperdrive/examples/pgedge/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/pgedge/ 301
+/hyperdrive/examples/supabase/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/supabase/ 301
+/hyperdrive/examples/timescale/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/timescale/ 301
+/hyperdrive/examples/xata/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/xata/ 301
+/hyperdrive/examples/fly/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/fly/ 301
+/hyperdrive/examples/connect-to-mysql/planetscale/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/planetscale/ 301
+/hyperdrive/examples/connect-to-mysql/azure/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/azure/ 301
+/hyperdrive/examples/connect-to-mysql/google-cloud-sql/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/google-cloud-sql/ 301
+/hyperdrive/examples/connect-to-mysql/aws-rds-aurora/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/aws-rds-aurora/ 301
 
 /hyperdrive/reference/supported-databases/ /hyperdrive/reference/supported-databases-and-features/ 301
 /hyperdrive/configuration/connect-to-postgres/ /hyperdrive/examples/connect-to-postgres/ 301
