@@ -107,15 +107,15 @@ If your database is empty, continue to step [2.3. Configure Drizzle-Kit for migr
 You can generate and run SQL migrations on your database based on your schema using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs/get-started/postgresql-new) for additional guidance.
 
 <Steps>
-1. Create a `.env` file in your `/src/` folder, and add your database connection string. The Drizzle Kit CLI will use this connection string to create and apply the migrations.
+1. Create a `.env` file the root folder of your project, and add your database connection string. The Drizzle Kit CLI will use this connection string to create and apply the migrations.
 
-   ```toml title="src/.env"
-   # src/.env
+   ```toml title=".env"
+   # .env
    # Replace with your direct database connection string
    DATABASE_URL='postgres://user:password@db-host.cloud/database-name'
    ```
 
-2. Create a `drizzle.config.ts` file in the root of your project to configure Drizzle Kit and add the following content:
+2. Create a `drizzle.config.ts` file in the root folder of your project to configure Drizzle Kit and add the following content:
 
    ```ts title="drizzle.config.ts"
    // drizzle.config.ts
