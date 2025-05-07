@@ -5,6 +5,10 @@ productLink: "/ai-gateway/"
 productArea: Developer platform
 productAreaLink: /workers/platform/changelog/platform/
 entries:
+  - publish_date: "2025-04-30"
+    title: Automatic Request headers
+    description: |-
+      * [Clarified Automatic Request headers](/browser-rendering/reference/automatic-request-headers/) in Browser Rendering. These headers are unique to Browser Rendering and are automatically included and cannot be removed or overridden.
   - publish_date: "2025-04-22"
     description: |-
       * Increased Max Number of Gateways per account: Raised the maximum number of gateways per account from 10 to 20 for paid users. This gives you greater flexibility in managing your applications as you build and scale.
