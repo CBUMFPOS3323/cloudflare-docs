@@ -18,17 +18,9 @@ This error occurs because your Puppeteer launch is not receiving the Browser bin
 
 1. Pass your Browser binding into `puppeteer.launch`, for example:
 
-```
-import browser from '@cloudflare/workers-browser-rendering';
-const browserInstance = await puppeteer.launch({
-  browserWSEndpoint: browser.endpoint,
-  // other options
-});
-```
+2. Ensure your account is on a [Workers Paid plan](https:/workers/platform/pricing/) so that Browser Rendering is enabled.
 
-2. Ensure your account is on a [Workers Paid plan](https://developers.cloudflare.com/workers/platform/pricing/) so that Browser Rendering is enabled.
-
-### Will browser rendering bypass Cloudflare's Bot Protection?
+### Will Browser Rendering bypass Cloudflare's Bot Protection?
 
 No, Browser Rendering requests are always identified as bots by Cloudflare and do not bypass Bot Protection. Additionally, Browser Rendering respects the robots.txt protocol, ensuring that any disallowed paths specified for user agents are not accessed during rendering.
 
@@ -60,3 +52,22 @@ Keep in mind that `page.evaluate` can only return primitive types like strings, 
 Returning an `HTMLElement` will not work.
 
 :::
+
+### What are the usage limits and pricing tiers for Cloudflare Browser Rendering and how do I estimate my costs?
+
+#### Usage Limits
+
+| Plan     | Concurrent Browsers | New Instances/min | Browser Timeout | REST API Calls/min |
+| :------- | :------------------ | :---------------- | :-------------- | :----------------- |
+| **Free** | 3 per account       | 3 per minute      | 60 s            | 6 per minute       |
+| **Paid** | 10 per account      | 10 per minute     | 60 s            | 60 per minute      |
+
+By default, idle browser sessions close after 60 seconds of inactivity. You can adjust this with the [`keep_alive` option](/browser-rendering/platform/puppeteer/#keep-alive).
+
+#### Pricing
+
+Browser Rendering is currently free up to the limits above until billing begins. Pricing will be announced in advance.
+
+### Does Browser Rendering rotate IP addresses for outbound requests?
+
+No. Browser Rendering requests originate from Cloudflares global network, but you cannot configure per-request IP rotation. All rendering traffic comes from Cloudflare IP ranges and requests include special headers [(`cf-biso-request-id`, `cf-biso-devtools`)](/browser-rendering/reference/automatic-request-headers/) so origin servers can identify them.
