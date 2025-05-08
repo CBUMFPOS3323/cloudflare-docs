@@ -97,9 +97,13 @@ export default {
 } satisfies ExportedHandler<Env>;
 ```
 
-If your database is empty, continue to step [2.3. Configure Drizzle-Kit for migration](/hyperdrive/examples/connect-to-mysql/mysql-drivers-and-libraries/drizzle-orm/#23-configure-drizzle-kit-for-migrations-optional).
-
 ### 2.3. Configure Drizzle-Kit for migrations (optional)
+
+:::note
+You need to set up the tables in your database so that Drizzle ORM can make queries that work.
+
+If you have already set it up (for example, if another user has applied the schema to your database), or if you are starting to use Drizzle ORM and the schema matches what already exists in your database, then you do not need to run the migration.
+:::
 
 You can generate and run SQL migrations on your database based on your schema using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs/get-started/mysql-new) for additional guidance.
 
@@ -134,9 +138,9 @@ You can generate and run SQL migrations on your database based on your schema us
    ```
    ```bash output
    No config path provided, using default 'drizzle.config.ts'
-   Reading config file '/Users/junlee/tutorials/jun-hyperdrive-drizzle-mysql/drizzle.config.ts'
+   Reading config file 'drizzle.config.ts'
    Reading schema files:
-   /Users/junlee/tutorials/jun-hyperdrive-drizzle-mysql/src/db/schema.ts
+   /src/db/schema.ts
 
    1 tables
    users 4 columns 0 indexes 0 fks
@@ -148,7 +152,7 @@ You can generate and run SQL migrations on your database based on your schema us
    ```
    ```bash output
    No config path provided, using default 'drizzle.config.ts'
-   Reading config file '/Users/junlee/tutorials/jun-hyperdrive-drizzle-mysql/drizzle.config.ts'
+   Reading config file 'drizzle.config.ts'
    ```
 </Steps>
 

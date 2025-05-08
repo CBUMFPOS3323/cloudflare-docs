@@ -100,9 +100,13 @@ You may use [node-postgres](https://orm.drizzle.team/docs/get-started-postgresql
 when using Drizzle ORM. Both are supported and compatible.
 :::
 
-If your database is empty, continue to step [2.3. Configure Drizzle-Kit for migration](/hyperdrive/examples/connect-to-postgres/postgres-drivers-and-libraries/drizzle-orm/#23-configure-drizzle-kit-for-migrations-optional).
-
 ### 2.3. Configure Drizzle-Kit for migrations (optional)
+
+:::note
+You need to set up the tables in your database so that Drizzle ORM can make queries that work.
+
+If you have already set it up (for example, if another user has applied the schema to your database), or if you are starting to use Drizzle ORM and the schema matches what already exists in your database, then you do not need to run the migration.
+:::
 
 You can generate and run SQL migrations on your database based on your schema using Drizzle Kit CLI. Refer to [Drizzle ORM docs](https://orm.drizzle.team/docs/get-started/postgresql-new) for additional guidance.
 
@@ -140,7 +144,7 @@ You can generate and run SQL migrations on your database based on your schema us
    ```
    ```bash output
    No config path provided, using default 'drizzle.config.ts'
-   Reading config file '/Users/junlee/tutorials/jun-hyperdrive-drizzle/drizzle.config.ts'
+   Reading config file 'drizzle.config.ts'
    1 tables
    users 4 columns 0 indexes 0 fks
 
@@ -152,7 +156,7 @@ You can generate and run SQL migrations on your database based on your schema us
    ```
    ```bash output
    No config path provided, using default 'drizzle.config.ts'
-   Reading config file '/Users/junlee/tutorials/jun-hyperdrive-drizzle/drizzle.config.ts'
+   Reading config file 'drizzle.config.ts'
    Using 'postgres' driver for database querying
    ```
 </Steps>
