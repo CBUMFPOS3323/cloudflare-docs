@@ -71,3 +71,11 @@ Browser Rendering is currently free up to the limits above until billing begins.
 ### Does Browser Rendering rotate IP addresses for outbound requests?
 
 No. Browser Rendering requests originate from Cloudflares global network, but you cannot configure per-request IP rotation. All rendering traffic comes from Cloudflare IP ranges and requests include special headers [(`cf-biso-request-id`, `cf-biso-devtools`)](/browser-rendering/reference/automatic-request-headers/) so origin servers can identify them.
+
+### I see `Error processing the request: Unable to create new browser: code: 429: message: Browser time limit exceeded for today`. How do I fix it?
+
+This error indicates you have hit the daily browser-instance limit on the Workers Free plan. Free-plan accounts are capped at 2 new browser instances per minute and 2 concurrent browsers; once you exceed those, further creation attempts return a 429 until the next UTC day. To resolve:
+
+1. [Upgrade to a Workers Paid plan](/workers/platform/pricing/) - Paid accounts raise these limits to 10 concurrent browsers and 10 new instances per minute.
+2. Request a higher limit - If you need elevated quotas before billing begins, complete the [Limit Increase Request Form](/browser-rendering/platform/limits/#workers-paid).
+3. [Optimize session reuse](/browser-rendering/platform/puppeteer/#keep-alive) - Reconnect to existing browser sessions rather than launching new ones to stay within your limits.
