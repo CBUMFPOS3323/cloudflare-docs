@@ -15,7 +15,7 @@ import { Render } from "~/components";
 
 ## Introduction
 
-The integration between Cloudflare Zero Trust and SentinelOne provides organizations with a comprehensive security solution that combines endpoint protection with [Zero Trust Network Access](https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/). This integration enables organizations to make access decisions based on device security posture, ensuring that only healthy and compliant devices can access protected resources. This reference architecture describes how organizations can implement and leverage this integration to enhance their security posture. The integration can assist in advancing an organization's or agency's Zero Trust Architecture Maturity Model, with the goal of one's organization eventually achieving Advanced or Optimal across all [CISA's 5 Pillars of Zero Trust.](https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf)
+The integration between Cloudflare One and SentinelOne provides organizations with a comprehensive security solution that combines endpoint protection with [Zero Trust Network Access](https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/). This integration enables organizations to make access decisions based on device security posture, ensuring that only healthy and compliant devices can access protected resources. This reference architecture describes how organizations can implement and leverage this integration to enhance their security posture. The integration can assist in advancing an organization's or agency's Zero Trust Architecture Maturity Model, with the goal of one's organization eventually achieving Advanced or Optimal across all [CISA's 5 Pillars of Zero Trust.](https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf)
 
 ## Who is this document for and what will you learn?
 
@@ -27,7 +27,7 @@ Recommended resources for a stronger understanding of Cloudflare's SentinelOne i
 
 ## Integration overview
 
-Cloudflare Zero Trust can integrate with SentinelOne to enforce device-based access policies for applications and resources. The integration works through a service-to-service posture check that identifies devices based on their serial numbers. This allows organizations to ensure that only managed and secure devices can access sensitive resources.
+Cloudflare One can integrate with SentinelOne to enforce device-based access policies for applications and resources. The integration works through a service-to-service posture check that identifies devices based on their serial numbers. This allows organizations to ensure that only managed and secure devices can access sensitive resources.
 
 ## Technical components
 
@@ -151,7 +151,7 @@ Organizations should consider their network architecture when implementing this 
 - Bandwidth and latency requirements for posture checks
 - Integration with existing security tools and workflows
 
-The integration between Cloudflare Zero Trust and SentinelOne requires thoughtful planning to ensure successful implementation. At its foundation, organizations need to prepare their environment by having the SentinelOne agent and Cloudflare WARP client deployed on all devices that will be subject to posture checks. This foundational step ensures that both security monitoring and secure network connectivity are in place before building additional security controls.
+The integration between Cloudflare One and SentinelOne requires thoughtful planning to ensure successful implementation. At its foundation, organizations need to prepare their environment by having the SentinelOne agent and Cloudflare WARP client deployed on all devices that will be subject to posture checks. This foundational step ensures that both security monitoring and secure network connectivity are in place before building additional security controls.
 
 When implementing the integration, organizations should approach it as a service provider relationship where SentinelOne acts as a trusted source of device security information. This relationship is established through secure API communications, with careful attention paid to proper credential management and regular verification of the connection between the platforms. The integration relies on SentinelOne's ability to provide real-time device security status, which Cloudflare then uses to make access decisions.
 
@@ -169,7 +169,7 @@ Regular testing and monitoring play vital roles in maintaining the effectiveness
 
 ## Conclusion
 
-The integration between Cloudflare Zero Trust and SentinelOne provides organizations with a powerful tool for implementing Zero Trust security principles. By combining endpoint protection with access control, organizations can ensure that only secure and compliant devices can access sensitive resources. This approach significantly reduces the risk of compromised devices accessing corporate resources while maintaining user productivity through seamless authentication and authorization processes.
+The integration between Cloudflare One and SentinelOne provides organizations with a powerful tool for implementing Zero Trust security principles. By combining endpoint protection with access control, organizations can ensure that only secure and compliant devices can access sensitive resources. This approach significantly reduces the risk of compromised devices accessing corporate resources while maintaining user productivity through seamless authentication and authorization processes.
 
 ## Related resources
 
