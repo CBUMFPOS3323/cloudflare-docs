@@ -1711,6 +1711,20 @@
 /hyperdrive/examples/xata/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/xata/ 301
 /hyperdrive/examples/fly/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/fly/ 301
 
+/hyperdrive/examples/connect-to-postgres/aws-rds-aurora/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/aws-rds-aurora/ 301
+/hyperdrive/examples/connect-to-postgres/azure/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/azure/ 301
+/hyperdrive/examples/connect-to-postgres/cockroachdb/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/cockroachdb/ 301
+/hyperdrive/examples/connect-to-postgres/digital-ocean/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/digital-ocean/ 301
+/hyperdrive/examples/connect-to-postgres/fly/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/fly/ 301
+/hyperdrive/examples/connect-to-postgres/google-cloud-sql/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/google-cloud-sql/ 301
+/hyperdrive/examples/connect-to-postgres/materialize/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/materialize/ 301
+/hyperdrive/examples/connect-to-postgres/neon/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/neon/ 301
+/hyperdrive/examples/connect-to-postgres/nile/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/nile/ 301
+/hyperdrive/examples/connect-to-postgres/pgedge/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/pgedge/ 301
+/hyperdrive/examples/connect-to-postgres/supabase/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/supabase/ 301
+/hyperdrive/examples/connect-to-postgres/timescale/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/timescale/ 301
+/hyperdrive/examples/connect-to-postgres/xata/ /hyperdrive/examples/connect-to-postgres/postgres-database-providers/xata/ 301
+
 /hyperdrive/examples/connect-to-mysql/planetscale/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/planetscale/ 301
 /hyperdrive/examples/connect-to-mysql/azure/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/azure/ 301
 /hyperdrive/examples/connect-to-mysql/google-cloud-sql/ /hyperdrive/examples/connect-to-mysql/mysql-database-providers/google-cloud-sql/ 301
