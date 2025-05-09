@@ -64,10 +64,11 @@ curl 'https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records' \
 
 API example:
 
-<APIRequest
-  path="/zones/{zone_id}/dnssec/zsk"
-  method="GET"
-/>
+```bash
+curl 'https://api.cloudflare.com/client/v4/zones/{zone_id}/dnssec/zsk' \
+--header "X-Auth-Email: <EMAIL>" \
+--header "X-Auth-Key: <API_KEY>"
+```
 
 Command line query example:
 
