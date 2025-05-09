@@ -38,23 +38,24 @@ Note that:
 
 2. Add the ZSK(s) of your external provider(s) to Cloudflare by creating a DNSKEY record on your zone.
 
-```bash
-curl 'https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records' \
---header "X-Auth-Email: <EMAIL>" \
---header "X-Auth-Key: <API_KEY>" \
---header "Content-Type: application/json" \
---data '{
-  "type": "DNSKEY",
-  "name": "<ZONE_NAME>",
-  "data": {
-    "flags": 256,
-    "protocol": 3,
-    "algorithm": 13,
-    "public_key": "<PUBLIC_KEY>"
-  },
-  "ttl": 3600
-}'
-```
+<APIRequest
+	path="/zones/{zone_id}/dns_records"
+	method="POST"
+	json={[
+  	{
+			"type": "DNSKEY",
+			"name": "<ZONE_NAME>",
+			"content": "<FORMATTED_DNSKEY_CONTENT>",
+			"data": {
+    		"flags": 256,
+    		"protocol": 3,
+    		"algorithm": 13,
+    		"public_key": "<PUBLIC_KEY>"
+			},
+			"ttl": 3600,
+		},
+	]}
+/>
 
 3. Once the DNSKEY record is transferred out from Cloudflare to your secondary provider, get Cloudflare's ZSK and manually add it to the DNSKEY record.
 
