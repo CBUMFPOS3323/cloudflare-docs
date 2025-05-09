@@ -28,9 +28,9 @@ Post-delivery deployment is time-efficient, because it does not involve MX chang
 
 :::note
 When you choose post-delivery deployment:
-The threat is removed **after** the message has been delivered to the inbox.
-It requires API scopes, or journaling rule configuration.
-Auto-move is only available in BCC/Journaling if you associate an integration.
+- The threat is removed **after** the message has been delivered to the inbox.
+- It requires API scopes, or journaling rule configuration.
+- Auto-move is only available in BCC/Journaling if you associate an integration.
 :::
 
 ## Pre-delivery deployment
@@ -47,9 +47,9 @@ Pre-delivery blocks threats in transit, and it adds banners or texts before the 
 
 :::note
 When you choose pre-delivery deployment:
-You must edit MX records or create a connector.
-You can enable auto-move events only once you associate an integration.
-Cloudflare [egress IPs](/cloudflare-one/email-security/setup/pre-delivery-deployment/egress-ips/) are allowed on downstream servers.
+- You must edit MX records or create a connector.
+- You can enable auto-move events only once you associate an integration.
+- Cloudflare [egress IPs](/cloudflare-one/email-security/setup/pre-delivery-deployment/egress-ips/) are allowed on downstream servers.
 :::
 
 ## Dispositions
@@ -64,10 +64,10 @@ Most [Business email compromise(BEC)](https://www.cloudflare.com/en-gb/learning/
 
 Roles you may want to include in the impersonation registry are:
 
-C-suites
-Finance roles
-HR
-IT help-desk.
+- C-suites
+- Finance roles
+- HR
+- IT help-desk.
 
 You should review your impersonation registry on a quarterly basis as roles change.
 
@@ -83,10 +83,10 @@ A reclassification is a change to an email's disposition **after** initial scann
 
 Reclassifications are critical because:
 
-**They help improve model accuracy**: Every validated reclassification teaches Cloudflare's machine learning to recognise new lures, language, infrastructure and benign patterns.
-**They reduce alert fatigue**: Correcting Suspicious or Spam emails that users actually want tailors detections to your organization, cutting noise in the dashboard.
-**They close the remediation loop**: When a disposition is upgraded to Malicious, Cloudflare auto-moves those emails out of every inbox (Graph API or Google Workspace API integrations).
-**They can help you log activity taken on any reclassification**: Each reclassification displays a submission ID, details about original, requested and final dispositions, and more. Refer to [Reclassify messages](/cloudflare-one/email-security/email-monitoring/search-email/#reclassify-messages) to learn more about reclassifications.
+- **They help improve model accuracy**: Every validated reclassification teaches Cloudflare's machine learning to recognise new lures, language, infrastructure and benign patterns.
+- **They reduce alert fatigue**: Correcting Suspicious or Spam emails that users actually want tailors detections to your organization, cutting noise in the dashboard.
+- **They close the remediation loop**: When a disposition is upgraded to Malicious, Cloudflare auto-moves those emails out of every inbox (Graph API or Google Workspace API integrations).
+- **They can help you log activity taken on any reclassification**: Each reclassification displays a submission ID, details about original, requested and final dispositions, and more. Refer to [Reclassify messages](/cloudflare-one/email-security/email-monitoring/search-email/#reclassify-messages) to learn more about reclassifications.
 
 To make the most of reclassifications:
 
